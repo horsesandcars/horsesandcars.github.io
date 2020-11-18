@@ -1,0 +1,19 @@
+source "https://rubygems.org"
+gemspec
+
+
+gem "jekyll", "~> 4"
+
+group :jekyll_plugins do
+#    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+    gem 'jekyll-feed'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-archives'
+    # gem 'kramdown'
+    # gem 'rouge'
+    # gem 'jekyll_picture_tag'
+    gem 'jekyll-redirect-from'
+    gem 'jekyll-include-cache'
+end

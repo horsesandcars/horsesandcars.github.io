@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "HorsesAndCars.com - The Hammond Family Website"
+title                    : "TheTrashman.com - Internet's Premiere Waste you in a video game disposal service"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Hammond Family"
-description              : "An amazing family."
+name                     : "The Trashman"
+description              : "Owner of things"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -85,23 +85,23 @@ social:
 
 # Analytics
 analytics:
-  provider               : google # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : UA-69145-38
+    tracking_id          : UA-69145-33
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Hammond Family"
+  name             : "TheTrashman.com"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "We are amazing!"
-  location         : "Wildwood"
+  bio              : "I am amazing!"
+  location         : "The Internet"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:hammondfamily@christoc.com"
+      url: "mailto:thetrashman@christoc.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/horsesandcars"
+      url: "https://github.com/thetrashmandc"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"

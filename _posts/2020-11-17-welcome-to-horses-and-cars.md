@@ -9,10 +9,10 @@ excerpt: "Links to each of our websites"
 
 Find each of us online:
 
-[Chris](http://www.chrishammond.com){:target="blank"}
+[Chris](https://www.chrishammond.com){:target="blank"}
 
-[Natalie](http://www.nataliehammond.com/){:target="blank"}
+[Natalie](https://www.nataliehammond.com/){:target="blank"}
 
-[Jacque](http://www.jacquelinehammond.com){:target="blank"}
+[Jacque](https://www.jacquelinehammond.com){:target="blank"}
 
-[Daniel](http://www.danielhammond.com/){:target="blank"}
+[Daniel](https://www.danielhammond.com/){:target="blank"}

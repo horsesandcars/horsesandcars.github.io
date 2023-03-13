@@ -1,12 +1,11 @@
 ---
-title: "Bill McDonald"
-date: 2018-11-19T10:47:58+10:00
+title: "Chris Hammond"
+date: 2023-03-13T13:00:00+10:00
 image: "images/team/nonsap-visuals-kMJp7620W6U-unsplash.jpg"
-jobtitle: "Graphic Designer"
+jobtitle: "Father"
 linkedinurl: ""
 weight: 7
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Chris is a father of two and has been working in the IT industry for over 20 years. He has a passion for technology and loves to help people. He is a keen cyclist and enjoys spending time with his family.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

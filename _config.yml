@@ -113,7 +113,11 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
+<<<<<<< HEAD
       url: "https://github.com/thetrashmandc"
+=======
+      # url: "https://github.com/horsesandcars"
+>>>>>>> c6d30888897a70181680207d491abd215e292417
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"

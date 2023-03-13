@@ -1,1 +1,1 @@
-# HorsesAndCars.com Hammond Family Website
+# HorsesAndCars.com

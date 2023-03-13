@@ -1,15 +1,23 @@
 ---
 layout: default
-bodyClass: "page-basic"
 ---
 
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12 col-md-8">
-            <div class="service service-single">
-                <h1 class="title">{{page.title}}</h1>
-                <div class="content">{{content}}</div>
-            </div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 flex-first flex-md-unordered"></div>
+        <div class="col-md-8 flex-first flex-md-unordered">
+            
+                <div class="mainheading">
+                    <div class="section-title">
+                        <h2><span>{{ page.title }}</span></h2>
+                    </div>
+                </div>
+                <div class="article-post">
+                    <section>
+                        {{content}}
+                    </section>
+                </div>            
+        </div>    
+        <div class="col-md-2 flex-first flex-md-unordered"></div>
     </div>
 </div>

@@ -1,9 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-12-23T18:44:04+00:00</updated><id>/feed.xml</id><title type="html">HorsesAndCars.com - The Hammond Family Website</title><subtitle>An amazing family.</subtitle><author><name>Hammond Family</name></author><entry><title type="html">Welcome To Horses and Cars - The Hammond Family Website</title><link href="/welcome-to-horses-and-cars" rel="alternate" type="text/html" title="Welcome To Horses and Cars - The Hammond Family Website" /><published>2020-11-17T20:19:07+00:00</published><updated>2020-11-17T20:19:07+00:00</updated><id>/welcome-to-horses-and-cars</id><content type="html" xml:base="/welcome-to-horses-and-cars">&lt;p&gt;Find each of us online:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.chrishammond.com&quot; target=&quot;blank&quot;&gt;Chris&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.nataliehammond.com/&quot; target=&quot;blank&quot;&gt;Natalie&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.jacquelinehammond.com&quot; target=&quot;blank&quot;&gt;Jacque&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.danielhammond.com/&quot; target=&quot;blank&quot;&gt;Daniel&lt;/a&gt;&lt;/p&gt;</content><author><name>Hammond Family</name></author><summary type="html">Links to each of our websites</summary></entry></feed>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HorsesAndCars.com - A Hammond family website! </title>
+    <description>A Hammond Family Site!</description>
+    <link>https://www.HorsesAndCars.com/</link>
+    <atom:link href="https://www.HorsesAndCars.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 13 Mar 2023 21:59:37 +0000</pubDate>
+    <lastBuildDate>Mon, 13 Mar 2023 21:59:37 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.2</generator>
+    
+      <item>
+        <title>Welcome to the home page of the Hammond Family</title>
+        <description>&lt;p&gt;Welcome to our home page!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Mar 2023 15:00:15 +0000</pubDate>
+        <link>https://www.HorsesAndCars.com/hammond-family</link>
+        <guid isPermaLink="true">https://www.HorsesAndCars.com/hammond-family</guid>
+        
+        
+        <category>family</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "https://www.HorsesAndCars.com/about",
     "title": "About HorsesAndCars.com",
-    "body": " HorsesAndCars. com is a sample blog template from Chris Hammond With the open source repository available on GitHub, you can easily fork the repository and create your own blog/website using GitHub Pages for hosting. Learn how to use HorsesAndCars. com "
+    "body": " Starting to build up a place to document some of the Hammond Family history. "
     }, {
     "id": 2,
     "url": "https://www.HorsesAndCars.com/categories",

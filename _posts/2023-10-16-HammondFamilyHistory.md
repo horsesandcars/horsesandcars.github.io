@@ -14,7 +14,7 @@ Below is the text from the typed version, digitized, with minor edits to try to 
 
 This document I believe was written by Susan Elizabeth Butterbaugh Hammond, she was apparently 80 years old at the time of its writing, so that would have put it around 1938. She passed in 1939.
 
-[PDF of Handwritten Document](/assets/documents/2023/HammondFamilyHandWrittenScan.pdf)
+[PDF of Handwritten Document](/assets/documents/2023/HammondFamilyHandWrittenScan.pdf)  
 [PDF of Typed Document](/assets/documents/2023/HammondFamilyPrintedScan2.pdf)
 
 ## HISTORY OF HAMMOND FAMILY

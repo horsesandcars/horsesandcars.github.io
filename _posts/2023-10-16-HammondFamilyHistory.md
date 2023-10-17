@@ -10,7 +10,7 @@ comments: false
 ---
 This blog post comes from a copy of a hand written family history that at some point in the past was typed up on a typewriter. I have a copy of both the hand written version (4 pages) and the typed version (3 pages) that I scanned in on 10/16/2023.
 
-Below is the text from the typed version, digitized, with minor edits to try to correct text where the OCR couldn't figure out wording. I have not corrected any grammar. It was typed out in mostly all caps, so I have left it as such.
+Below is the text from the typed version, digitized, with minor edits to try to correct text where the OCR couldn't figure out wording. I have not corrected any grammar. It was typed out in mostly all caps, but I am slowly converting it to sentence case and updating the formatting to make it easier to read.
 
 This document I believe was written by Susan Elizabeth Butterbaugh Hammond, she was apparently 80 years old at the time of its writing, so that would have put it around 1938. She passed in 1939.
 
@@ -19,48 +19,48 @@ This document I believe was written by Susan Elizabeth Butterbaugh Hammond, she 
 
 ## HISTORY OF HAMMOND FAMILY
 
-MOTHER WAS BORN NEAR HESSEN CASTLE, GERMANY. HER FATHER'S NAME WAS HENRY? (HERVIG) L. WITTY. HER MOTHER'S NAME WAS CATHARINE E. WITTY, MAIDEN NAME WAS CATHARINE E. EFFELANDT. MOTHER'S NAME WAS MARGARET ANN WITTY. BORN THE 11TH OF MARCH 1825. HER FAMILY MOVED. TO U. S. THE SPRING OF 1836. SHE HAD 2 BROTHERS WHEN THEY CAME HERE, 1 OLDER THAN HER AND 1 YOUNGER. OLDER ONE'S NAME WAS JOHN WITTY. THE YOUNGER ONE'S NAME WAS MARTIN. BOTH DIED. THE OLDER ONE DIED DEC 1890. MY MOTHER MARRIED MY FATHER, ANSON HAMMOND FEB 2, 1843. 9 CHILDREN WAS BORN OF THIS UNION. THE FIRST WAS STILLBORN. THE SECOND WAS A SON, HENRY LUCIUS HAMMOND, THE NEXT - WAS A SON BARZILLIA HAMMOND. NEXT - WAS A GIRL CATHARINE MATILDA HAMMOND. NEXT - WAS A SON HIRAM MARTIN HAMMOND. NEXT - WAS A SON JOHN WITTY HAMMOND. THE NEXT - WAS A GIRL SUSAN ELIZABETH HAMMOND. NEXT - WAS A SON, DAVID DEZELOMS HAMMOND. NEXT - WAS A SON FRANK WILBUR HAMMOND. THIS FAMILY ARE NOW ALL DEAD EXCEPT THE YOUNGEST - DAUGHTER, SUSAN E. BUTTERBAUGH HAMMOND, WHO IS NOW 80 YEARS OLD AND SICKLY.
+Mother was born near Hessen Castle, Germany. Her father's name was Henry? (Hervig) L. Witty. Her mother's name was Catharine E. Witty, maiden name was Catharine E. Effelandt. Mother's name was Margaret Ann Witty, born the 11th of March 1825. Her family moved to U.S. the spring of 1836. She had 2 brothers when they came here, 1 older than her and 1 younger. Older one's name was John Witty. The younger one's name was Martin. Both died. The older one died Dec 1890.
+My mother married my father, Anson Hammond, Feb 2, 1843. 9 children were born of this union. The first was stillborn. The second was a son, Henry Lucius Hammond. The next was a son, Barzillia Hammond. Next was a girl, Catharine Matilda Hammond. Next was a son, Hiram Martin Hammond. Next was a son, John Witty Hammond. The next was a girl, Susan Elizabeth Hammond. Next was a son, David Dezeloms Hammond. Next was a son, Frank Wilbur Hammond. This family are now all dead except the youngest daughter, Susan E. Butterbaugh Hammond, who is now 80 years old and sickly.
 
-OUR FATHER WAS DRAFTED THE LAST YEAR OF THE WAR. HE DIED THE 31ST OF DEC 1864, 2 YEARS AFTER HIS DEATH MY MOTHER MARRIED AGAIN, A COUSIN OF HERS, JOHN H. KEHN. SHE MOVED WITH HIM AND HER 4 YOUNGEST CHILDREN (HAMMOND) HER CHILDREN, AND HE HAD 1 CHILD BY 1ST WIFE BEFORE THE WAR. WE MOVED TO SANDUSKY CO, OHIO, WHERE OUR STEPFATHER RAN A MERCHANDISE STORE UNTIL THE SPRING OF 1869. MY STEPFATHER, MOTHER AND 4 OF HER HAMMOND CHILDREN AND HIS SON, GEORGE B. KEHN, MOVED TO PETTIS COUNTY, MISSOURI IN APRIL 1869. OUR BROTHER, JOHN WITTY HAMMOND, DIED WHEN HE WAS 7 YEARS OLD DURING THE CIVIL WAR OF DIPHTHERIA. THE NEXT WAS OUR FATHER, ANSON HAMMOND WHO DIED THE LAST DAY OF THE YEAR 1864 AT SAVANNAH, GEORGIA. THE NEXT TO DIE WAS THE OLDEST DAUGHTER, CATHARINE MATILDA HAMMOND BROWN, IN SEPTEMBER 1865 WHO WAS MARRIED 2 WEEKS AND 4 DAYS TO CALVIN BROWN WHEN SHE TOOK LUNG FEVER AND DIED. THE NEXT TO DIE WAS OUR STEPBROTHER WHO WAS RUN OVER BY SOME FREIGHT CARS BEING MOVED AT BROADWAY CROSSING AT SEDALIA, MO. THAT KILLED HIM DECEMBER 19, 1877. THE NEXT TO DIE WAS OUR MOTHER, MARGARET ANN HAMMOND KEHN, WHO DIED WITH PNEUMONIA FEB 2, 1891, AGE 65 YRS, 26 DAYS, OLD. 
+Our father was drafted the last year of the war. He died the 31st of Dec 1864, 2 years after his death my mother married again, a cousin of hers, John H. Kehn. She moved with him and her 4 youngest children (Hammond) her children, and he had 1 child by 1st wife before the war. We moved to Sandusky Co, Ohio, where our stepfather ran a merchandise store until the spring of 1869. 
+My stepfather, mother, and 4 of her Hammond children and his son, George B. Kehn, moved to Pettis County, Missouri in April 1869. Our brother, John Witty Hammond, died when he was 7 years old during the Civil War of diphtheria. The next was our father, Anson Hammond who died the last day of the year 1864 at Savannah, Georgia. 
+The next to die was the oldest daughter, Catharine Matilda Hammond Brown, in September 1865 who was married 2 weeks and 4 days to Calvin Brown when she took lung fever and died. The next to die was our stepbrother who was run over by some freight cars being moved at Broadway crossing at Sedalia, MO. That killed him December 19, 1877. The next to die was our mother, Margaret Ann Hammond Kehn, who died with pneumonia Feb 2, 1891, age 65 yrs, 26 days, old.
+
 ### NAMES OF ANSON HAMMOND'S FAMILY
 
-ANSON HAMMOND BORN JANUARY 27, 1821.
+Anson Hammond born January 27, 1821. He married Margaret Ann Witty February 2nd, 1842, who was born March 11, 1825.
 
-HE MARRIED MARGARET ANN WITTY FEBRUARY 2nd, 1842, WHO WAS BORN MARCH 11, 1825.
+They had 8 living children born of this union.
+1. The oldest was Henry L. Hammond born January 25th, 1844.
+2. Barzillia Hammond born September 27, 1847.
+3. Catharine M. Hammond born January 21, 1850, died 1865.
+4. Hiram M. Hammond born July 21, 1853.
+5. John W. Hammond born April 27, 1855.
+6. Susan E. Hammond born February 10, 1858.
+7. David D. Hammond born October 26, 1860.
+8. Frank W. Hammond born July 5, 1864.
 
-THEY WAS 8 LIVING CHILDREN BORN OF THIS UNION.
-1. THE OLDEST WAS HENRY L. HAMMOND BORN JANUARY 25th, 1844.
-2. BARZILLIA HAMMOND BORN SEPTEMBER 27, 1847.
-3. CATHARINE M. HAMMOND BORN JANUARY 21, 1850, DIED 1865.
-4. HIRAM M. HAMMOND BORN JULY 21, 1853.
-5. JOHN W. HAMMOND BORN APRIL 27; 1855.
-6. SUSAN E. HAMMOND BORN FEBRUARY 10, 1858.
-7. DAVID D. HAMMOND BORN OCTOBER 26, 1860.
-8. FRANK W. HAMMOND BORN JULY 5, 1864.
+Henry L. Hammond was married to Emily Gyde April 11, 1866 - 2 children born of this union.
+1. Elva M. Hammond born January 4, 1867.
+2. William A. Hammond born January 31, 1872. Died July 9, 1972.
 
+Barzillia Hammond was married to Rebecca Whitinger, 6 children were born to this union. 
+1. Eva L. Hammond born January 4, 1868. 
+2. Nellie Hammond born March 3, 1869.
+3. John W. Hammond born October 23, 1871.
+4. Charles P. Hammond born July 1st, 1875.
+5. George B. Hammond born April 5th, 1878.
+6. Arcus Hammond born April 25, 1880.
 
+Hiram M. Hammond was married to Alice M. Whitney 1875, 2 children born of this union. 
+1. Musie V. Hammond born November 12, 1876.
+2. 1 son born October 29, 1878.
 
-HENRY L. HAMMOND WAS MARRIED TO EMILY GYDE APR 11, 1866 - 2 CHILDREN BORN OF THIS UNION.
-1. ELVA M. HAMMOND BORN JAN 4, 1867.
-2. WILLIAM A. HAMMOND BORN JAN 31, 1872. DIED JULY 9, 1972.
+Alice and baby died 1878.
 
-BARZILLIA HAMMOND WAS MARRIED TO REBECCA WHITINGER, 6 CHILDREN WAS BORN TO THIS UNION. 
-1. EVA L. HAMMOND BORN JANUARY 4, 1868. 
-2. NELLIE HAMMOND BORN MAR 3., 1869.
-3. JOHN W. HAMMOND BORN OCT 23, 1871.
-4. CHARLES P. HAMMOND BORN JULY 1st, 1875.
-5. GEORGE B. HAMMOND BORN APRIL 5th, 1878,
-6. ARCUS HAMMOND BORN APRIL 25, 1880.
+Hiram then married Mealy Atwood December 25, 1879. 3 children born of this union.
+1. Margaret A. Hammond born September 29, 1880.
+2. Harry W. Hammond born February 23, 1882.
+3. Fred A. Hammond born April 7, 1887.
 
-HIRAM M. HAMMOND WAS MARRIED TO ALICE M. WHITNEY 1875, 2 CHILDREN BORN OF THIS UNION. 
-1. MUSIE V. HAMMOND BORN NOV 12, 1876
-2. 1 SON BORN OCT 29, 1878.
-
-ALICE AND BABY DIED 1878.
-
-HIRAM THEN MARRIED MEALY ATWOOD DEC 25, 1879. 3 CHILDREN BORN OF THIS UNION.
-1. MARGARET A. HAMMOND BORN SEPT 29, 1880.
-2. HARRY W. HAMMOND BORN FEB 23, 1882.
-3. FRED A. HAMMOND BORN APR 7, 1887.
-
-JOHN W. HAMMOND DIED
+John W. Hammond died.

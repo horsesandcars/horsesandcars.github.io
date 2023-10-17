@@ -8,7 +8,7 @@ var documents = [{
     "id": 1,
     "url": "https://www.HorsesAndCars.com/about",
     "title": "About HorsesAndCars.com",
-    "body": " Starting to build up a place to document some of the Hammond Family history. "
+    "body": " Starting to build up a place to document some of the Hammond Family history. Family Links: Chris HammondNatalie HammondJacqueline HammondDaniel Hammond "
     }, {
     "id": 2,
     "url": "https://www.HorsesAndCars.com/categories",

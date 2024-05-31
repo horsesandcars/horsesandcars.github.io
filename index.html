@@ -1,7 +1,19 @@
 ---
 layout: default
-title: Home
+title: Hammond Family Website HorsesAndCars.com
 ---
+<section> 
+    <h1 itemprop="headline">Welcome to {{ site.title }} 
+        {% if paginator.page %}
+            {% if paginator.page > 1 %}
+                - Page {{ paginator.page }} of {{ paginator.total_pages }} 
+            {% endif %}
+        {% endif %}
+
+    </h1>
+    <p>{{ site.description }} </p>
+</section>
+
 
 {% if page.url == "/" %}
 

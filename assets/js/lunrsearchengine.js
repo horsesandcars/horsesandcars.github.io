@@ -11,24 +11,24 @@ var documents = [{
     "body": " Starting to build up a place to document some of the Hammond Family history. Family Links: Chris HammondNatalie HammondJacqueline HammondDaniel Hammond "
     }, {
     "id": 2,
-    "url": "https://www.HorsesAndCars.com/categories",
-    "title": "Categories",
-    "body": ""
+    "url": "https://www.HorsesAndCars.com/",
+    "title": "Hammond Family Website HorsesAndCars.com",
+    "body": "   Welcome to HorsesAndCars. com - A Hammond family website!                   A Hammond Family Site!       Featured:                                                                                                                                                                                                             Hammer's House of Honing Ice Hockey Skate Sharpening in St. Louis                              :               Hammer’s House of Honing: The Ultimate Skate Sharpening Destination in St. Louis:                                                                       19 Jan 2024                                                                                                                                                                                                                                                                                                                    Hammond Family History 1800's                              :               This blog post comes from a copy of a hand written family history that at some point in the past was typed up on a. . . :                                                                       16 Oct 2023                                                                                                                            All Stories:                                                                               Hammer's House of Honing Ice Hockey Skate Sharpening in St. Louis              :       Hammer’s House of Honing: The Ultimate Skate Sharpening Destination in St. Louis:                               19 Jan 2024                                                                                                              Hammond Family History 1800's              :       This blog post comes from a copy of a hand written family history that at some point in the past was typed up on a typewriter. I have a copy. . . :                               16 Oct 2023                                                                                                              Welcome to the home page of the Hammond Family              :       Welcome to our home page! This is a place for us to share some of our family history, and other family related information. We’ll be adding content over time, also. . . :                               13 Mar 2023                                            "
     }, {
     "id": 3,
-    "url": "https://www.HorsesAndCars.com/",
-    "title": "Home",
-    "body": "      Featured:                                                                                                                                                                                                             Hammer's House of Honing Ice Hockey Skate Sharpening in St. Louis                              :               Hammer’s House of Honing: The Ultimate Skate Sharpening Destination in St. Louis:                                                                       19 Jan 2024                                                                                                                                                                                                                                                                                                                    Hammond Family History 1800's                              :               This blog post comes from a copy of a hand written family history that at some point in the past was typed up on a. . . :                                                                       16 Oct 2023                                                                                                                            All Stories:                                                                               Hammer's House of Honing Ice Hockey Skate Sharpening in St. Louis              :       Hammer’s House of Honing: The Ultimate Skate Sharpening Destination in St. Louis:                               19 Jan 2024                                                                                                              Hammond Family History 1800's              :       This blog post comes from a copy of a hand written family history that at some point in the past was typed up on a typewriter. I have a copy. . . :                               16 Oct 2023                                                                                                              Welcome to the home page of the Hammond Family              :       Welcome to our home page! This is a place for us to share some of our family history, and other family related information. We’ll be adding content over time, also. . . :                               13 Mar 2023                                            "
+    "url": "https://www.HorsesAndCars.com/About",
+    "title": "",
+    "body": ""
     }, {
     "id": 4,
-    "url": "https://www.HorsesAndCars.com/About",
+    "url": "https://www.HorsesAndCars.com/categories",
     "title": "",
     "body": ""
     }, {
     "id": 5,
     "url": "https://www.HorsesAndCars.com/redirects.json",
     "title": "",
-    "body": "{“/About”:”https://www. horsesandcars. com/about”} "
+    "body": "{“/About”:”https://www. horsesandcars. com/about”,”/tags”:”https://www. horsesandcars. com/category”,”/tags/”:”https://www. horsesandcars. com/category”,”/categories”:”https://www. horsesandcars. com/category”} "
     }, {
     "id": 6,
     "url": "https://www.HorsesAndCars.com/robots.txt",

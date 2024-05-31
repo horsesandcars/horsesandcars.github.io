@@ -46,7 +46,21 @@
 		<meta property="og:description" content="A Hammond Family Site!" />
 		<meta name="description" content="A Hammond Family Site!" />
 
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@" />
+		<meta
+			name="twitter:title"
+			content="Welcome to the home page of the Hammond Family - HorsesAndCars.com - A Hammond family website! "
+		/>
+		<meta name="twitter:description" content="A Hammond Family Site!" />
+		<meta
+			name="twitter:image"
+			content="https://www.HorsesAndCars.com/assets/images_out/BlogPost-1-1600-20109ac88.jpg"
+		/>
+
 		<meta name="keywords" content="" />
+
 		<link rel="canonical" href="https://www.HorsesAndCars.com/hammond-family" />
 
 		<link
@@ -112,6 +126,10 @@
 
 						<li class="nav-item">
 							<a class="nav-link" href="/about">About</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="/photos">Photos</a>
 						</li>
 
 						<script src="/assets/js/lunr.js"></script>
@@ -180,7 +198,7 @@
 
 				<!-- Content
 ================================================== -->
-				<div class="main-content">
+				<main class="main-content">
 					<!-- Begin Article
 ================================================== -->
 					<div class="container">
@@ -226,94 +244,112 @@
 							<!-- Post -->
 
 							<div class="col-md-9 flex-first flex-md-unordered">
-								<div class="mainheading">
-									<!-- Author Box -->
+								<article itemscope itemtype="http://schema.org/BlogPosting">
+									<div class="mainheading">
+										<header>
+											<!-- Post Title -->
+											<h1 class="posttitle" itemprop="headline">
+												Welcome to the home page of the Hammond Family
+											</h1>
 
-									<!-- Post Title -->
-									<h1 class="posttitle">
-										Welcome to the home page of the Hammond Family
-									</h1>
-								</div>
+											<!-- Post Date -->
+											<div style="float: right">
+												<small>
+													<span class="post-date" style="text-align: right"
+														>Posted:
+														<time
+															class="post-date"
+															datetime="2023-03-13T15:00:15+00:00"
+															itemprop="datePublished"
+															>Mar 13, 2023 15:00</time
+														>
+														<br />
+													</span>
+												</small>
+											</div>
 
-								<!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+											<!-- Author Box -->
+										</header>
+									</div>
 
-								<!-- End Adsense -->
+									<!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
 
-								<!-- Post Featured Image -->
+									<!-- End Adsense -->
 
-								<img
-									class="featured-image img-fluid lazyimg"
-									src="/assets/images_out/BlogPost-1-800-20109ac88.jpg"
-									alt="Welcome to the home page of the Hammond Family"
-									srcset="
-										/assets/images_out/BlogPost-1-200-20109ac88.jpg   200w,
-										/assets/images_out/BlogPost-1-400-20109ac88.jpg   400w,
-										/assets/images_out/BlogPost-1-800-20109ac88.jpg   800w,
-										/assets/images_out/BlogPost-1-1600-20109ac88.jpg 1600w,
-										/assets/images_out/BlogPost-1-2000-20109ac88.jpg 2000w
-									"
-								/>
+									<!-- Post Featured Image -->
 
-								<!-- End Featured Image -->
+									<img
+										class="featured-image img-fluid lazyimg"
+										src="/assets/images_out/BlogPost-1-800-20109ac88.jpg"
+										alt="Welcome to the home page of the Hammond Family"
+										srcset="
+											/assets/images_out/BlogPost-1-200-20109ac88.jpg   200w,
+											/assets/images_out/BlogPost-1-400-20109ac88.jpg   400w,
+											/assets/images_out/BlogPost-1-800-20109ac88.jpg   800w,
+											/assets/images_out/BlogPost-1-1600-20109ac88.jpg 1600w,
+											/assets/images_out/BlogPost-1-2000-20109ac88.jpg 2000w
+										"
+									/>
 
-								<!-- Post Content -->
-								<div class="article-post">
-									<!-- Toc if any -->
+									<!-- End Featured Image -->
 
-									<!-- End Toc -->
-									<p>
-										Welcome to our home page! This is a place for us to share
-										some of our family history, and other family related
-										information. We’ll be adding content over time, also
-										figuring out how to best organize and display the content,
-										hopefully so that it is easy to find for future generations.
-									</p>
-								</div>
+									<!-- Post Content -->
+									<div class="article-post">
+										<!-- Toc if any -->
 
-								<!-- Rating -->
+										<!-- End Toc -->
+										<p>
+											Welcome to our home page! This is a place for us to share
+											some of our family history, and other family related
+											information. We’ll be adding content over time, also
+											figuring out how to best organize and display the content,
+											hopefully so that it is easy to find for future
+											generations.
+										</p>
+									</div>
 
-								<!-- Post Date -->
-								<p>
-									<small>
-										<span class="post-date"
-											><time class="post-date" datetime="2023-03-13"
-												>13 Mar 2023</time
-											></span
-										>
-									</small>
-								</p>
+									<!-- Rating -->
 
-								<!-- Post Categories -->
-								<div class="after-post-cats">
-									<ul class="tags mb-4">
-										<li>
-											<a class="smoothscroll" href="/categories#family"
-												>family</a
-											>
-										</li>
-									</ul>
-								</div>
-								<!-- End Categories -->
+									<footer>
+										<!-- Author Box -->
+									</footer>
+									<!-- Post Categories -->
+									<div class="after-post-cats">
+										<h4>
+											<small><a href="/category">Categories:</a></small>
+										</h4>
+										<ul class="tags mb-4">
+											<li>
+												<a
+													class="smoothscroll btn-secondary"
+													href="/category/family/"
+													>family</a
+												>
+											</li>
+										</ul>
+									</div>
+									<!-- End Categories -->
 
-								<!-- Post Tags -->
-								<div class="after-post-tags">
-									<ul class="tags"></ul>
-								</div>
-								<!-- End Tags -->
+									<!-- Post Tags -->
+									<div class="after-post-tags">
+										<ul class="tags"></ul>
+									</div>
+									<!-- End Tags -->
 
-								<!-- Prev/Next -->
-								<div
-									class="row PageNavigation d-flex justify-content-between font-weight-bold"
-								>
-									<a
-										class="next d-block col-md-6 text-lg-right"
-										href="/hammond-family-history-1800s"
-										>Hammond Family History 1800's &raquo;
-									</a>
+									<!-- Prev/Next -->
+									<div
+										class="row PageNavigation d-flex justify-content-between font-weight-bold"
+									>
+										<a
+											class="next d-block col-md-6 text-lg-right"
+											href="/hammond-family-history-1800s"
+											>Hammond Family History 1800's &raquo;
+										</a>
 
-									<div class="clearfix"></div>
-								</div>
-								<!-- End Categories -->
+										<div class="clearfix"></div>
+									</div>
+									<!-- End Categories -->
+								</article>
 							</div>
 							<!-- End Post -->
 						</div>
@@ -330,7 +366,7 @@
 					<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
 https://search.google.com/structured-data/testing-tool/u/0/
 ================================================== -->
-				</div>
+				</main>
 			</div>
 
 			<!-- Categories Jumbotron
@@ -347,9 +383,9 @@ https://search.google.com/structured-data/testing-tool/u/0/
 						</div>
 					</div>
 					<div class="col-md-8 p-5 align-self-center text-center">
-						<a class="mt-1 mb-1" href="/categories#family">family (2)</a>
+						<a class="mt-1 mb-1" href="/category/family/">family (2)</a>
 
-						<a class="mt-1 mb-1" href="/categories#hockey">hockey (1)</a>
+						<a class="mt-1 mb-1" href="/category/hockey/">hockey (1)</a>
 					</div>
 				</div>
 			</div>
@@ -360,7 +396,8 @@ https://search.google.com/structured-data/testing-tool/u/0/
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-sm-6 text-center text-lg-left">
-							Copyright © 2024 HorsesAndCars.com
+							Copyright © 2024 HorsesAndCars.com |
+							<a href="/policies">Policies</a>
 						</div>
 						<div class="col-md-6 col-sm-6 text-center text-lg-right">
 							<a target="_blank" href="https://www.chrishammond.com/"

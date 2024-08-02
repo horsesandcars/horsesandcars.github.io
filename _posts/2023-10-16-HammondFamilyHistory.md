@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hammond Family History 1800's
+description: "A hand written history of the Hammond Family as told by Susan Elizabeth Butterbaught Hammond."
 date: '2023-10-16T09:00:15+00:00'
 permalink: hammond-family-history-1800s
 image: 2023/hammondfamilyhistory.jpg

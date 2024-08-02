@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hammer's House of Honing Ice Hockey Skate Sharpening in St. Louis
+description: "Hammer's house of honing is the premiere skate sharpening service in St. Louis!"
 date: '2024-01-19T09:00:15+00:00'
 permalink: hammers-house-of-honing-ice-hockey-skate-sharpening-in-st-louis
 image: 2024/hammershouseofhoning.png

@@ -1,8 +1,8 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import PostBox from '../../../components/PostBox.astro';
-import { getCategories, slugify } from '../../../lib/posts';
+import PostCard from '../../../components/PostCard.astro';
+import { getCategories, slugify, capitalize } from '../../../lib/posts';
 
 export const getStaticPaths = (async () => {
   const categories = await getCategories();
@@ -13,14 +13,17 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { name, posts } = Astro.props;
+const label = capitalize(name);
 ---
-<BaseLayout title={name} ogType="category" layout="archive">
-  <section class="recent-posts">
-    <div class="section-title">
-      <h2>Archive of posts with <span>category '{name}'</span></h2>
+<BaseLayout title={label} description={`Stories about ${name} from the Hammond family.`}>
+  <div class="wrap">
+    <header class="page-head">
+      <span class="kicker"><a href="/category">Topics</a></span>
+      <h1>{label}</h1>
+      <p>{posts.length} {posts.length === 1 ? 'story' : 'stories'} about {name}.</p>
+    </header>
+    <div class="card-grid section">
+      {posts.map((post) => <PostCard post={post} headingLevel="h2" />)}
     </div>
-    <div class="row listrecent">
-      {posts.map((post) => <PostBox post={post} />)}
-    </div>
-  </section>
+  </div>
 </BaseLayout>

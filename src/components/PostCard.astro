@@ -1,0 +1,32 @@
+---
+import { type Post, postUrl, excerpt, dateLabel, readingTime, categoryUrl } from '../lib/posts';
+import PostImage from './PostImage.astro';
+
+interface Props {
+  post: Post;
+  featured?: boolean;
+  headingLevel?: 'h2' | 'h3';
+}
+const { post, featured = false, headingLevel: H = 'h3' } = Astro.props;
+const url = postUrl(post);
+const category = post.data.categories[0];
+const summary = featured && post.data.description ? post.data.description : excerpt(post, 40);
+---
+<article class:list={['card', { 'card-featured': featured }]}>
+  <div class="card-media">
+    <PostImage
+      name={post.data.image}
+      alt=""
+      sizes={featured ? '(min-width: 760px) 600px, 100vw' : '(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw'}
+    />
+  </div>
+  <div class="card-body">
+    {category && <span class="kicker"><a href={categoryUrl(category)}>{category}</a></span>}
+    <H class="card-title"><a href={url}>{post.data.title}</a></H>
+    <p class="card-excerpt">{summary}</p>
+    <p class="meta">
+      <time datetime={post.data.date.toISOString()}>{dateLabel(post.data.date)}</time>
+      <span class="dot">{readingTime(post)} min read</span>
+    </p>
+  </div>
+</article>

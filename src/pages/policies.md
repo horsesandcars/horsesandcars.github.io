@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: HorsesAndCars.com Policies
+title: Policies
+kicker: HorsesAndCars.com
 ---
 
-Do we need any policies? What do you think? 
+Do we need any policies? What do you think?

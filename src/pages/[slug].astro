@@ -3,12 +3,8 @@ import type { GetStaticPaths } from 'astro';
 import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostImage from '../components/PostImage.astro';
-import Share from '../components/Share.astro';
-import StarRating from '../components/StarRating.astro';
-import AuthorThumb from '../components/AuthorThumb.astro';
-import Disqus from '../components/Disqus.astro';
-import { SITE, AUTHORS } from '../config';
-import { getPosts, postUrl, categoryUrl, dateLong, type Post } from '../lib/posts';
+import { SITE } from '../config';
+import { getPosts, postUrl, categoryUrl, dateLabel, readingTime, type Post } from '../lib/posts';
 
 export const getStaticPaths = (async () => {
   const posts = await getPosts(); // newest first
@@ -16,161 +12,94 @@ export const getStaticPaths = (async () => {
     params: { slug: post.id },
     props: {
       post,
-      // Jekyll semantics: previous = older post, next = newer post
-      previous: posts[i + 1] as Post | undefined,
-      next: posts[i - 1] as Post | undefined,
+      older: posts[i + 1] as Post | undefined,
+      newer: posts[i - 1] as Post | undefined,
     },
   }));
 }) satisfies GetStaticPaths;
 
-const { post, previous, next } = Astro.props;
+const { post, older, newer } = Astro.props;
 const { data } = post;
 const { Content, headings } = await render(post);
-const author = data.author ? AUTHORS[data.author] : undefined;
 const url = `${SITE.url}${postUrl(post)}`;
-const showComments = data.comments && !!SITE.disqus;
 const tocHeadings = headings.filter((h) => h.depth >= 2 && h.depth <= 3);
-const sortedCategories = [...data.categories].sort();
-const sortedTags = [...data.tags].sort();
+const category = data.categories[0];
+const shareUrl = encodeURIComponent(url);
+const shareTitle = encodeURIComponent(data.title);
 ---
-<BaseLayout
-  title={data.title}
-  description={data.description}
-  image={data.image}
-  keywords={data.keywords}
-  author={data.author}
-  layout="post"
-  isPost
->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 pl-0">
-        <Share title={data.title} url={url} comments={showComments} />
-      </div>
+<BaseLayout title={data.title} description={data.description} image={data.image} ogType="article" publishedTime={data.date}>
+  <article class="wrap" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="article-head">
+      {category && <span class="kicker"><a href={categoryUrl(category)}>{category}</a></span>}
+      <h1 itemprop="headline">{data.title}</h1>
+      {data.description && <p class="article-dek" itemprop="description">{data.description}</p>}
+      <p class="meta">
+        <time datetime={data.date.toISOString()} itemprop="datePublished">{dateLabel(data.date)}</time>
+        <span class="dot">{readingTime(post)} min read</span>
+        {data.last_modified_at && <span class="dot">Updated {dateLabel(data.last_modified_at)}</span>}
+      </p>
+    </header>
 
-      <div class="col-md-9 flex-first flex-md-unordered">
-        <article itemscope itemtype="http://schema.org/BlogPosting">
-          <div class="mainheading">
-            <header>
-              <h1 class="posttitle" itemprop="headline">{data.title}</h1>
+    {data.image && (
+      <figure class="article-hero">
+        <PostImage name={data.image} alt={data.title} sizes="(min-width: 1000px) 960px, 100vw" loading="eager" />
+      </figure>
+    )}
 
-              <div style="float:right">
-                <small>
-                  <span class="post-date" style="text-align:right">Posted: <time class="post-date" datetime={data.date.toISOString()} itemprop="datePublished">{dateLong(data.date)}</time>
-                    <br />
-                    {data.last_modified_at && (
-                      <>(Updated: <time datetime={data.last_modified_at.toISOString()} itemprop="dateModified">{dateLong(data.last_modified_at)}</time>)</>
-                    )}
-                  </span>
-                </small>
-              </div>
-
-              {author && (
-                <div class="row post-top-meta">
-                  <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                    <div itemtype="http://schema.org/Person">
-                      By: <a class="link-dark" href={author.web} itemprop="sameAs"><span itemprop="name">{author.display_name}</span></a><a href={author.twitter} class="btn follow" itemprop="sameAs">Follow</a>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </header>
-          </div>
-
-          {SITE.adsense.enabled && (
-            <>
-              <script is:inline async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-              <ins class="adsbygoogle" style="display:block" data-ad-client={SITE.adsense.client} data-ad-slot={SITE.adsense.slot} data-ad-format="auto" data-full-width-responsive="true"></ins>
-              <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-              <br />
-            </>
-          )}
-
-          <PostImage name={data.image} alt={data.title} class="featured-image img-fluid" sizes="(min-width: 992px) 730px, 100vw" loading="eager" />
-
-          <div class="article-post">
-            {data.toc && tocHeadings.length > 0 && (
-              <>
-                {data.beforetoc && <p><em>{data.beforetoc}</em></p>}
-                <div class="toc mt-4 mb-4 lead">
-                  <h3 class="font-weight-bold">Summary</h3>
-                  <ul>
-                    {tocHeadings.map((h) => (
-                      <li style={h.depth === 3 ? 'margin-left:1.5em' : undefined}><a href={`#${h.slug}`}>{h.text}</a></li>
-                    ))}
-                  </ul>
-                </div>
-              </>
-            )}
-            <Content />
-          </div>
-
-          {data.rating !== undefined && (
-            <div class="rating mb-4 d-flex align-items-center">
-              <strong class="mr-1">Rating:</strong> <StarRating rating={data.rating} />
-            </div>
-          )}
-
-          <footer>
-            {author && (
-              <div class="row post-top-meta">
-                <div class="col-xs-12 col-md-12 col-lg-12 text-center text-md-left">
-                  <h3>About the Author:</h3>
-                  <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
-                    <AuthorThumb author={author} />
-                  </div>
-                  <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left" itemprop="author" itemtype="http://schema.org/Person">
-                    <a class="link-dark" href={author.web} itemprop="sameAs"><span itemprop="name">{author.display_name}</span></a><a href={author.twitter} class="btn follow" itemprop="sameAs">Follow</a>
-                  </div>
-                  <span class="author-description" itemprop="description">{author.description}</span>
-                </div>
-              </div>
-            )}
-          </footer>
-
-          <div class="after-post-cats">
-            <h4><small><a href="/category">Categories:</a></small></h4>
-            <ul class="tags mb-4">
-              {sortedCategories.map((c) => (
-                <li><a class="smoothscroll btn-secondary" href={categoryUrl(c)}>{c}</a></li>
-              ))}
-            </ul>
-          </div>
-
-          <div class="after-post-tags">
-            <ul class="tags">
-              {sortedTags.map((t) => (
-                <li><a class="smoothscroll" href={`/tags#${t.replace(/ /g, '-')}`}>#{t}</a></li>
-              ))}
-            </ul>
-          </div>
-
-          <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-            {previous && <a class="prev d-block col-md-6" href={postUrl(previous)}> &laquo; {previous.data.title}</a>}
-            {next && <a class="next d-block col-md-6 text-lg-right" href={postUrl(next)}>{next.data.title} &raquo; </a>}
-            <div class="clearfix"></div>
-          </div>
-        </article>
+    <div class="article-body">
+      {data.toc && tocHeadings.length > 0 && (
+        <nav class="toc" aria-label="On this page">
+          {data.beforetoc && <p><em>{data.beforetoc}</em></p>}
+          <h2>On this page</h2>
+          <ul>
+            {tocHeadings.map((h) => <li class={`depth-${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}
+          </ul>
+        </nav>
+      )}
+      <div class="prose" itemprop="articleBody">
+        <Content />
       </div>
     </div>
-  </div>
 
-  {showComments && (
-    <div class="container">
-      <div id="comments" class="row justify-content-center mb-5">
-        <div class="col-md-8"><Disqus /></div>
+    <footer class="article-foot">
+      <ul class="chips" aria-label="Topics">
+        {data.categories.map((c) => <li><a class="chip" href={categoryUrl(c)}>{c}</a></li>)}
+      </ul>
+      <div class="share">
+        <span>Share</span>
+        <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener" aria-label="Share on Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v1.9H8v3.2h2.6V22H14V11.7h2.6l.4-3.2z"/></svg>
+        </a>
+        <a href={`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`} target="_blank" rel="noopener" aria-label="Share on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>
+        </a>
+        <a href={`mailto:?subject=${shareTitle}&body=${shareUrl}`} aria-label="Share by email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+        <button type="button" data-copy={url} aria-label="Copy link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+        </button>
       </div>
-    </div>
-  )}
+    </footer>
+  </article>
 
-  {data.rating !== undefined && (
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org/',
-      '@type': 'Review',
-      itemReviewed: { '@type': 'Thing', name: data.title },
-      author: { '@type': 'Person', name: author?.display_name },
-      datePublished: data.date.toISOString().slice(0, 10),
-      reviewRating: { '@type': 'Rating', ratingValue: String(data.rating), bestRating: '5' },
-    })} />
+  {(older || newer) && (
+    <nav class="wrap" aria-label="More stories">
+      <div class="post-nav">
+        {older && <a class="prev" href={postUrl(older)}><span class="label">← Previous story</span><span class="title">{older.data.title}</span></a>}
+        {newer && <a class="next" href={postUrl(newer)}><span class="label">Next story →</span><span class="title">{newer.data.title}</span></a>}
+      </div>
+    </nav>
   )}
 </BaseLayout>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) =>
+    btn.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(btn.dataset.copy!);
+      btn.style.position = 'relative';
+      btn.setAttribute('data-copied', '');
+      setTimeout(() => btn.removeAttribute('data-copied'), 1500);
+    }),
+  );
+</script>

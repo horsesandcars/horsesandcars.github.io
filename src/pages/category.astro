@@ -1,19 +1,38 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostBox from '../components/PostBox.astro';
-import { getCategories } from '../lib/posts';
+import PostImage from '../components/PostImage.astro';
+import { getCategories, categoryUrl, postUrl, dateLabel } from '../lib/posts';
 
 const categories = await getCategories();
 ---
-<BaseLayout title="Categories" layout="categories">
-  <div class="row listrecent">
-    {categories.map(([name, posts]) => (
-      <>
-        <div class="section-title col-md-12 mt-4">
-          <h2 id={name.replace(/ /g, '-')}>Category <span class="text-capitalize">{name}</span></h2>
-        </div>
-        {posts.map((post) => <PostBox post={post} />)}
-      </>
-    ))}
+<BaseLayout title="Topics" description="Browse every HorsesAndCars.com story by topic.">
+  <div class="wrap">
+    <header class="page-head">
+      <span class="kicker">Browse</span>
+      <h1>Topics</h1>
+      <p>Every story on the site, grouped by what it's about.</p>
+    </header>
+
+    <div class="topic-list section">
+      {categories.map(([name, posts]) => (
+        <section aria-labelledby={`topic-${name}`}>
+          <div class="section-head">
+            <h2 id={`topic-${name}`} style="text-transform:capitalize">{name}</h2>
+            <a href={categoryUrl(name)}>{posts.length} {posts.length === 1 ? 'story' : 'stories'} →</a>
+          </div>
+          <ul class="post-rows">
+            {posts.map((post) => (
+              <li class="post-row">
+                <PostImage name={post.data.image} alt="" sizes="112px" />
+                <div>
+                  <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
+                  <p class="meta">{dateLabel(post.data.date)}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
   </div>
 </BaseLayout>

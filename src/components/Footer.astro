@@ -1,0 +1,43 @@
+---
+import BrandMark from './BrandMark.astro';
+import { SITE, FAMILY_LINKS } from '../config';
+import { getCategories, categoryUrl } from '../lib/posts';
+
+const categories = await getCategories();
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">
+        <BrandMark class="brand-mark" />
+        <span class="brand-text">
+          <span class="brand-name">Horses <em>&amp;</em> Cars</span>
+          <span class="brand-tag">{SITE.tagline}</span>
+        </span>
+      </a>
+      <p>{SITE.description}</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/#stories">All stories</a></li>
+        {categories.map(([name, posts]) => (
+          <li><a href={categoryUrl(name)} style="text-transform:capitalize">{name}</a> <span class="meta">({posts.length})</span></li>
+        ))}
+        <li><a href="/about">About</a></li>
+        <li><a href="/feed.xml">RSS feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Family</h2>
+      <ul>
+        {FAMILY_LINKS.map((f) => <li><a href={f.url}>{f.name}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© {year} {SITE.title}</span>
+    <a href="/policies">Policies</a>
+  </div>
+</footer>

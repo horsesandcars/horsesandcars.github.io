@@ -1,14 +1,14 @@
 ---
 interface Props { current: number; total: number }
 const { current, total } = Astro.props;
-const pathFor = (n: number) => (n === 1 ? '/' : `/page${n}/`);
+const pathFor = (n: number) => (n === 1 ? '/#stories' : `/page${n}/#stories`);
 ---
 {total > 1 && (
-  <div class="pagination">
-    {current > 1 ? <a class="ml-1 mr-1" href={pathFor(current - 1)}>&laquo; Prev</a> : <span>&laquo; Prev</span>}
+  <nav class="pagination" aria-label="Pages">
+    {current > 1 ? <a href={pathFor(current - 1)} rel="prev">← Newer</a> : <span class="disabled">← Newer</span>}
     {Array.from({ length: total }, (_, i) => i + 1).map((n) =>
-      n === current ? <span class="ml-1 mr-1">{n}</span> : <a class="ml-1 mr-1" href={pathFor(n)}>{n}</a>
+      n === current ? <span aria-current="page">{n}</span> : <a href={pathFor(n)}>{n}</a>
     )}
-    {current < total ? <a class="ml-1 mr-1" href={pathFor(current + 1)}>Next &raquo;</a> : <span>Next &raquo;</span>}
-  </div>
+    {current < total ? <a href={pathFor(current + 1)} rel="next">Older →</a> : <span class="disabled">Older →</span>}
+  </nav>
 )}

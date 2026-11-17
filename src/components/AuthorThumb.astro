@@ -1,9 +1,0 @@
----
-import type { Author } from '../config';
-interface Props { author: Author }
-const { author } = Astro.props;
-const src = author.avatar
-  ? `/${author.avatar.replace(/^\/+/, '')}`
-  : `https://www.gravatar.com/avatar/${author.gravatar}?s=250&d=mm&r=x`;
----
-<img class="author-thumb" src={src} alt={author.display_name} />

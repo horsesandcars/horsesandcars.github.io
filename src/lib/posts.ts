@@ -71,13 +71,10 @@ export function resolveImage(name?: string): ImageMetadata | undefined {
   return mod.default;
 }
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+/** "October 16, 2023" (UTC, so dates don't shift with the build machine's timezone). */
+export const dateLabel = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
-/** Jekyll `date_to_string`: "13 Mar 2023" (UTC). */
-export const dateToString = (d: Date) =>
-  `${String(d.getUTCDate()).padStart(2, '0')} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-
-/** Jekyll `date: "%b %-d, %Y %H:%M"` (UTC). */
-export const dateLong = (d: Date) =>
-  `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()} ` +
-  `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
+/** Estimated minutes to read a post. */
+export const readingTime = (post: Post) =>
+  Math.max(1, Math.round(stripMarkdown(post.body ?? '').split(' ').length / 230));

@@ -1,0 +1,32 @@
+---
+import BrandMark from './BrandMark.astro';
+import { SITE } from '../config';
+
+const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const links = [
+  { href: '/#stories', label: 'Stories', match: (p: string) => p === '/' || p.startsWith('/page') },
+  { href: '/category', label: 'Topics', match: (p: string) => p.startsWith('/category'), optional: true },
+  { href: '/about', label: 'About', match: (p: string) => p === '/about' },
+];
+---
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label={`${SITE.name} — home`}>
+      <BrandMark class="brand-mark" />
+      <span class="brand-text">
+        <span class="brand-name">Horses <em>&amp;</em> Cars</span>
+        <span class="brand-tag">{SITE.tagline}</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      {links.map((l) => (
+        <a href={l.href} class={l.optional ? 'nav-optional' : undefined} aria-current={l.match(path) ? 'page' : undefined}>{l.label}</a>
+      ))}
+      <button type="button" class="search-trigger" data-search-open aria-label="Search the site">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+        <span class="label">Search</span>
+        <kbd>/</kbd>
+      </button>
+    </nav>
+  </div>
+</header>

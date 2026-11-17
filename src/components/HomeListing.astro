@@ -1,49 +1,82 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostBox from './PostBox.astro';
-import FeaturedBox from './FeaturedBox.astro';
+import PostCard from './PostCard.astro';
+import PostImage from './PostImage.astro';
 import Pagination from './Pagination.astro';
 import { SITE } from '../config';
-import { getPosts } from '../lib/posts';
+import { getPosts, getCategories, categoryUrl, postUrl } from '../lib/posts';
 
 interface Props { page: number }
 const { page } = Astro.props;
 const posts = await getPosts();
+const categories = await getCategories();
 const total = Math.max(1, Math.ceil(posts.length / SITE.postsPerPage));
 const pagePosts = posts.slice((page - 1) * SITE.postsPerPage, page * SITE.postsPerPage);
-const featured = posts.filter((p) => p.data.featured);
-const pageLabel = page > 1 ? `Page ${page} of ${total} - ` : '';
+const allFeatured = posts.filter((p) => p.data.featured);
+// The hero showcases a featured family-history piece if there is one, else the newest post.
+const heroPost = allFeatured.find((p) => p.data.categories.includes('family')) ?? posts[0];
+// Don't repeat the hero story in the Featured section.
+const featured = allFeatured.filter((p) => p !== heroPost);
 ---
-<BaseLayout title="Hammond Family Website HorsesAndCars.com" titlePrefix={pageLabel}>
-  <section>
-    <h1 itemprop="headline">Welcome to {SITE.title}{page > 1 && ` - Page ${page} of ${total}`}</h1>
-    <p>{SITE.description}</p>
-  </section>
-
+<BaseLayout title={page > 1 ? `Stories, page ${page} of ${total}` : undefined}>
   {page === 1 && (
-    <section class="featured-posts">
-      <div class="section-title">
-        <h2><span>Featured</span></h2>
+    <section class="wrap hero">
+      <div>
+        <span class="kicker">The Hammond Family Archive</span>
+        <h1>Family history, stories <em>&amp;</em> the things we love.</h1>
+        <p class="hero-lede">
+          A place to gather what we know about the Hammonds — handwritten histories, family records, and the
+          everyday adventures of horses, hockey and cars — so it's easy to find for the generations to come.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#stories">Read the stories</a>
+          <a class="btn btn-ghost" href="/about">About the family</a>
+        </div>
       </div>
-      <div class="row">
-        {featured.map((post) => <FeaturedBox post={post} />)}
+      {heroPost?.data.image && (
+        <figure class="hero-figure">
+          <PostImage name={heroPost.data.image} alt={heroPost.data.title} sizes="(min-width: 820px) 460px, 90vw" loading="eager" />
+          <figcaption>
+            From the archive
+            <a href={postUrl(heroPost)}>{heroPost.data.title} →</a>
+          </figcaption>
+        </figure>
+      )}
+    </section>
+  )}
+
+  {page === 1 && featured.length > 0 && (
+    <section class="wrap section" aria-labelledby="featured-heading">
+      <div class="section-head">
+        <h2 id="featured-heading">Featured</h2>
+      </div>
+      <div class="featured-grid">
+        {featured.map((post) => <PostCard post={post} featured />)}
       </div>
     </section>
   )}
 
-  <section class="recent-posts">
-    <div class="section-title">
-      <h2><span>All Stories</span></h2>
+  <section class="wrap section" id="stories" aria-labelledby="stories-heading">
+    <div class="section-head">
+      <h2 id="stories-heading">{page > 1 ? `All stories — page ${page}` : 'All stories'}</h2>
+      <a href="/category">Browse by topic →</a>
     </div>
-    <div class="row listrecent">
-      {pagePosts.map((post) => <PostBox post={post} />)}
+    <div class="card-grid">
+      {pagePosts.map((post) => <PostCard post={post} />)}
     </div>
+    <Pagination current={page} total={total} />
   </section>
 
-  <div class="bottompagination">
-    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
-    <span class="navigation" role="navigation">
-      <Pagination current={page} total={total} />
-    </span>
-  </div>
+  {categories.length > 0 && (
+    <section class="wrap section" aria-labelledby="topics-heading">
+      <div class="section-head">
+        <h2 id="topics-heading">Explore by topic</h2>
+      </div>
+      <ul class="chips">
+        {categories.map(([name, list]) => (
+          <li><a class="chip" href={categoryUrl(name)}>{name} <span class="count">{list.length}</span></a></li>
+        ))}
+      </ul>
+    </section>
+  )}
 </BaseLayout>

@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostBox from './PostBox.astro';
+import FeaturedBox from './FeaturedBox.astro';
+import Pagination from './Pagination.astro';
+import { SITE } from '../config';
+import { getPosts } from '../lib/posts';
+
+interface Props { page: number }
+const { page } = Astro.props;
+const posts = await getPosts();
+const total = Math.max(1, Math.ceil(posts.length / SITE.postsPerPage));
+const pagePosts = posts.slice((page - 1) * SITE.postsPerPage, page * SITE.postsPerPage);
+const featured = posts.filter((p) => p.data.featured);
+const pageLabel = page > 1 ? `Page ${page} of ${total} - ` : '';
+---
+<BaseLayout title="Hammond Family Website HorsesAndCars.com" titlePrefix={pageLabel}>
+  <section>
+    <h1 itemprop="headline">Welcome to {SITE.title}{page > 1 && ` - Page ${page} of ${total}`}</h1>
+    <p>{SITE.description}</p>
+  </section>
+
+  {page === 1 && (
+    <section class="featured-posts">
+      <div class="section-title">
+        <h2><span>Featured</span></h2>
+      </div>
+      <div class="row">
+        {featured.map((post) => <FeaturedBox post={post} />)}
+      </div>
+    </section>
+  )}
+
+  <section class="recent-posts">
+    <div class="section-title">
+      <h2><span>All Stories</span></h2>
+    </div>
+    <div class="row listrecent">
+      {pagePosts.map((post) => <PostBox post={post} />)}
+    </div>
+  </section>
+
+  <div class="bottompagination">
+    <div class="pointerup"><i class="fa fa-caret-up"></i></div>
+    <span class="navigation" role="navigation">
+      <Pagination current={page} total={total} />
+    </span>
+  </div>
+</BaseLayout>

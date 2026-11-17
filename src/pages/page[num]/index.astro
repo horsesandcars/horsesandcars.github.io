@@ -1,0 +1,15 @@
+---
+import type { GetStaticPaths } from 'astro';
+import HomeListing from '../../components/HomeListing.astro';
+import { SITE } from '../../config';
+import { getPosts } from '../../lib/posts';
+
+// Mirrors Jekyll's paginate_path: /page2/, /page3/, ...
+export const getStaticPaths = (async () => {
+  const total = Math.ceil((await getPosts()).length / SITE.postsPerPage);
+  return Array.from({ length: Math.max(0, total - 1) }, (_, i) => ({ params: { num: String(i + 2) } }));
+}) satisfies GetStaticPaths;
+
+const page = Number(Astro.params.num);
+---
+<HomeListing page={page} />

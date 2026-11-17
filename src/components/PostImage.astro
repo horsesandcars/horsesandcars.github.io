@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import { resolveImage } from '../lib/posts';
+
+interface Props {
+  name?: string;
+  alt: string;
+  class?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { name, alt, class: className, sizes = '(min-width: 40em) 600px, 100vw', loading = 'lazy' } = Astro.props;
+const src = resolveImage(name);
+---
+{src && (
+  <Image
+    src={src}
+    alt={alt}
+    class={className}
+    widths={[200, 400, 800, 1600, 2000].filter((w) => w <= src.width)}
+    sizes={sizes}
+    loading={loading}
+  />
+)}

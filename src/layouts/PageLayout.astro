@@ -1,0 +1,31 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  frontmatter?: { title: string; description?: string };
+}
+// Works both as a component layout and as a Markdown `layout:`
+const fm = Astro.props.frontmatter ?? Astro.props;
+---
+<BaseLayout title={fm.title} description={fm.description} layout="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 flex-first flex-md-unordered"></div>
+      <div class="col-md-8 flex-first flex-md-unordered">
+        <div class="mainheading">
+          <div class="section-title">
+            <h2><span>{fm.title}</span></h2>
+          </div>
+        </div>
+        <div class="article-post">
+          <section>
+            <slot />
+          </section>
+        </div>
+      </div>
+      <div class="col-md-2 flex-first flex-md-unordered"></div>
+    </div>
+  </div>
+</BaseLayout>

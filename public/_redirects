@@ -1,0 +1,7 @@
+# Old Jekyll redirect_from entries. Not forced (no "!"), so they only apply
+# when no file exists at that path, which avoids loops if matching ignores case.
+/About /about 301
+/tags /category 301
+/tags/ /category 301
+/categories /category 301
+/categories.html /category 301

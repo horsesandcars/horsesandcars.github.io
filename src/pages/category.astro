@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostBox from '../components/PostBox.astro';
+import { getCategories } from '../lib/posts';
+
+const categories = await getCategories();
+---
+<BaseLayout title="Categories" layout="categories">
+  <div class="row listrecent">
+    {categories.map(([name, posts]) => (
+      <>
+        <div class="section-title col-md-12 mt-4">
+          <h2 id={name.replace(/ /g, '-')}>Category <span class="text-capitalize">{name}</span></h2>
+        </div>
+        {posts.map((post) => <PostBox post={post} />)}
+      </>
+    ))}
+  </div>
+</BaseLayout>
